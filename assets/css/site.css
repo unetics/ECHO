@@ -1,0 +1,49 @@
+@set {
+/* 	colours */
+	background: white;   		
+	dark: #333;
+	light: #F4F2E2;
+	primary: red;
+	secondary: blue;
+/* font sizes */
+	base_font_size:16px;
+	small_heading:20px;
+	medium_heading:34px;
+	large_heading:42px;
+	huge_heading:60px;
+
+}
+/* helpers */
+@import "helpers/reset.css";
+@import "helpers/helper.css";
+@import "helpers/grid.css";
+/* elements */
+@import "elements/buttons.css";
+@import "elements/dividers.css";
+@import "elements/headings.css";
+@import "elements/images.css";
+@import "elements/links.css";
+@import "elements/lists.css";
+/* components */
+/* sections */
+@import "sections/header.css";
+@import "sections/nav.css";
+
+body {
+  font-size:  $(base_font_size);
+  font-family: sans-serif;
+  line-height: 1;
+  color: $(dark);
+  background-color: $(background);
+}
+
+main{
+position: relative;
+margin: auto;
+margin: 75px auto 0;
+width: 100%;
+	@media only screen and ( max-width: 777px ) {
+		width: 100%;
+	}
+}
+

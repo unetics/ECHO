@@ -1,0 +1,185 @@
+nav {
+  background-color: $(primary);
+  color: $(light);
+  display: block;
+  width: 100%;
+  text-align:center; 
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 0px 1px #333;
+  font-weight: 300;
+  line-height: 1;
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    z-index: 10000;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      transition: all 0.2s; 
+        &.current-menu-item a{
+			color: white;
+        }
+        &.current-parent-item a{
+			color: white;
+        }
+        &.logo{
+	        float: left;
+	        a{line-height: 1;
+		        margin: 2px;
+		        padding: 0 10px;
+	        }
+	        img{margin: 0;
+		        max-height: 50px;
+		        overflow: hidden;
+	        }
+	       
+        }
+        a{
+	       color: @body-bg;
+			color: #a4a4a4;
+			display: block;
+			line-height: 56px;
+			text-decoration: none;
+			overflow: hidden;
+			border-right: 1px solid l-adjust( $(primary) -10 );
+			padding-left: 35px;
+			padding-right: 35px;
+			font-size: 14px;
+			text-overflow: ellipsis;
+			text-shadow: 0 -1px 0 #292929;
+			white-space: nowrap;
+			box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
+			span{
+				color: @brand-secondary;
+			}
+        }
+    }
+    li:first-child > a {
+		box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.065), inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
+	}
+	li:hover > a{
+          color: @body-bg;
+        }
+
+
+  }
+}
+
+      
+      nav > ul > li > ul {
+        background-color: #222;
+        border-top: 0;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+         
+        -transition: opacity 0.2s;
+      }
+
+        nav > ul > li:hover > ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          nav > ul > li > ul > li {
+            display: block;
+            z-index: 400;
+          }
+
+            nav > ul > li > ul > li > a {
+              color: #fff;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+              line-height: 24px
+            }
+
+              nav > ul > li > ul > li:hover > a {
+                background-color: rgba( 255, 255, 255, 0.1);
+              }
+ 
+ 
+
+.rmm {
+	display:block;
+	position:fixed;
+	width:100%;
+	text-align: center;
+	
+	background-color: @brand-primary;
+}
+
+.rmm ul {
+	display:block;	overflow:hidden;
+	list-style:none;
+}
+
+.rmm-toggled {
+	display:none;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	margin:0 auto !important;
+}
+.rmm-button:hover {
+	cursor:pointer;
+}
+.rmm .rmm-toggled ul {
+	display:none;
+	margin:0px !important;
+	padding:0px !important;
+}
+.rmm .rmm-toggled ul li {
+	display:block;
+	margin:0 auto !important;
+}
+
+.rmm .rmm-toggled {
+	min-height:56px;
+}
+.rmm .rmm-toggled-controls {
+	display:block;
+	height:56px;
+	color:white;
+	text-align:left;
+	position:relative;
+}
+.rmm .rmm-toggled-title {
+	position:relative;
+	top:15px;
+	left:15px;
+	font-size:16px;
+	color:white;
+}
+.rmm .rmm-button {
+	display:block;
+	position:absolute;
+	right:15px;
+	top:15px;
+}
+
+.rmm .rmm-button span {
+	display:block;
+	margin-top:4px;
+	height:2px;
+	background:white;
+	width:24px;
+}
+.rmm .rmm-toggled ul li:hover {
+	background: darken( @brand-primary, 10%);
+}
+.rmm .rmm-toggled ul li a {
+	display:block;
+	width:100%;
+	text-align:center;
+	padding:10px 0px 10px 0px;
+	border-top: 1px solid @body-bg;
+	color: @body-bg;
+}

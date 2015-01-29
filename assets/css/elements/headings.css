@@ -1,0 +1,29 @@
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+  margin: 10px;
+  small {
+    font-size: 0.8;
+  }
+}
+
+.huge_heading{ font-size: $(huge_heading); } 
+.large_heading { font-size: $(large_heading); } 
+.medium_heading { font-size: $(medium_heading); } 
+.small_heading { font-size: $(small_heading); } 
+
+.fit {width: 96%;padding: 2%; margin: auto;}
+
+.heading{
+	margin: 10px 0;
+}
+.invert{
+	color: @body-bg;
+}
+.light{
+	color: mix(@headings-color, @body-bg, 50%);
+}

@@ -1,0 +1,45 @@
+//
+// Button groups
+// --------------------------------------------------
+.btn-group {
+  > .btn {
+    & + .btn {
+      margin-left: 0;
+    }
+    & + .dropdown-toggle {
+      border-left: 2px solid fade(@brand-primary, 15%);
+      padding: 10px 12px;
+
+      .caret {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+    &.btn-gh + .dropdown-toggle {
+      .caret {
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+    &.btn-sm + .dropdown-toggle {
+      .caret {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.dropdown-toggle {
+  .caret {
+    margin-left: 8px;
+  }
+}
+
+// The clickable button for toggling the menu
+// Remove the gradient and set the same inset shadow as the :active state
+.btn-group.open .dropdown-toggle {
+  color: fade(@btn-primary-color, 75%);
+  box-shadow: none;
+}
+

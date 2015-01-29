@@ -1,0 +1,44 @@
+{
+    "site.crush.css": {
+        "imports": [
+            "helpers\/reset.css",
+            "helpers\/helper.css",
+            "helpers\/grid.css",
+            "elements\/buttons.css",
+            "elements\/dividers.css",
+            "elements\/headings.css",
+            "elements\/images.css",
+            "elements\/links.css",
+            "elements\/lists.css",
+            "sections\/header.css",
+            "sections\/nav.css"
+        ],
+        "datem_sum": 17046123326,
+        "options": {
+            "vars": {
+                "background": "#eeeeee",
+                "dark": "#222222",
+                "light": "#dddddd",
+                "primary": "#dddddd",
+                "secondary": "#ef733e"
+            },
+            "minify": false,
+            "formatter": null,
+            "versioning": true,
+            "boilerplate": true,
+            "cache": true,
+            "context": null,
+            "output_file": null,
+            "output_dir": null,
+            "asset_dir": null,
+            "doc_root": null,
+            "vendor_target": "all",
+            "rewrite_import_urls": true,
+            "plugins": null,
+            "settings": [],
+            "stat_dump": false,
+            "source_map": false,
+            "newlines": "use-platform"
+        }
+    }
+}

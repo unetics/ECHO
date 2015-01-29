@@ -1,0 +1,26 @@
+.widget_panel > div{
+	box-sizing: border-box;
+	padding: 40px;
+	margin: 10px;
+	border-radius: @border-radius-base;
+	p{
+		font-size: 22px;
+		padding: 0;
+	}
+	&.default{
+		color: @brand-primary;
+		background: lighten(@brand-secondary, 35%);
+		h3{
+		color: @brand-primary;
+		}
+	}
+	&.primary{
+		background: @brand-primary;
+		color: white;
+		}
+	&.alt{
+		background: @brand-secondary;
+		background: linear-gradient(lighten(@brand-secondary, 10) 0%,@brand-secondary 10%, @brand-secondary 100%);
+		color: @body-bg;
+	}
+}
