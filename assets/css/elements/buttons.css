@@ -1,17 +1,4 @@
 .btn {
-  border: none;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1;
-  border-radius: 0;
-  padding: 10px 20px;
-  -webkit-font-smoothing: subpixel-antialiased;
-  transition: border .25s linear, color .25s linear, background-color .25s linear;
-  display: inline-block;
-  text-align: center;
-  border: 2px solid transparent;
-  text-decoration: none;
-
   span{ color: $(primary); }
 
   &.left{
@@ -22,7 +9,8 @@
   } 
   &.center{
   	  display: table;
-	  margin: auto;
+	  margin: 5px auto;
+	  padding:
   }
   &.block {
 	  white-space: normal;
@@ -30,21 +18,14 @@
   } 
    
   &.primary {
-	  color: $(light);
 	  background-color: $(primary);
-	    &:hover,
-		&:focus {
-			color: $(light);
-			background: l-adjust( $(primary) -15 );
-				}
-		span{ color: $(secondary); }
   }
   &.secondary {
-	  color: $(light);
+	  color: $(secondary_contrast);
 	  background-color: $(secondary);
 	    &:hover,
 		&:focus {
-			color: $(light);
+			color: $(secondary_contrast)-red;
 			background: l-adjust( $(secondary) -15 );
 				}
 		span{ color: $(primary); }
@@ -73,4 +54,66 @@
 		  		}
 		span{ color: $(secondary); }
   		}
+}
+.btn {
+	border: none;
+	margin: 10px;
+	padding: 14px 26px;
+	font-size: 14px;
+	line-height: 100%;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.1s ease-in-out;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	border-radius: $(rounding)px;
+	}
+	
+.btn:active {
+	padding-top: 15px;
+    margin-bottom: 9px;
+}
+.btn, .btn:hover, .btn:active {
+	outline: 0 none;
+	text-decoration: none;
+	color: #fff;
+}
+
+.btn {
+	background-color: $(primary);
+	box-shadow: 0px 3px 0px 0px l-adjust( $(primary) -15 );
+}
+.btn:hover {
+	background-color: l-adjust( $(primary) -5 );
+}
+.btn:active {
+	box-shadow: 0px 1px 0px 0px l-adjust( $(primary) -15 );
+}
+
+
+.btn-2 {
+	background-color: #f06060;
+	box-shadow: 0px 3px 0px 0px #cd1313;
+}
+.btn-2:hover {
+	background-color: #ed4444;
+}
+.btn-2:active {
+	box-shadow: 0px 1px 0px 0px #cd1313;
+}
+
+.btn-3 {
+	background-color: #ff6a80;
+	box-shadow: 0px 3px 0px 0px #da0020;
+}
+.btn-3:hover {
+	background-color: #ff566f;
+}
+.btn-3:active {
+	box-shadow: 0px 1px 0px 0px #da0020;
 }

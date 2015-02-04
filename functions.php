@@ -1,15 +1,14 @@
 <?php
-add_action( 'wp_loaded', 'parent_prefix_load_classes', 10 );
+add_action( 'wp_enqueue_scripts', 'parent_prefix_load_classes', 10 );
 
 function parent_prefix_load_classes()
 {
+	$primaryContrast = getContrastYIQ(tr_option_field("[primary]"));	
 
 	$vars = [];
-	$vars['background'] = tr_option_field("[background]");
-	$vars['dark'] = tr_option_field("[dark]");
-	$vars['light'] = tr_option_field("[light]");
 	$vars['primary'] = tr_option_field("[primary]");
-	$vars['secondary'] = tr_option_field("[secondary]");
+	$vars['primary_contrast'] = $primaryContrast;
+	$vars['rounding'] = tr_option_field("[rounding]");
 	
 	$vars['base_font_size'] = tr_option_field("[base_font_size]");
 	$vars['small_heading'] = tr_option_field("[small_heading]");
@@ -18,9 +17,11 @@ function parent_prefix_load_classes()
 	$vars['huge_heading'] = tr_option_field("[huge_heading]");
 
 	$vars = array_filter($vars, 'strlen'); // removes unset array values
-
+	$plugins = ['forms'];
 	
-	$css = csscrush_file(__DIR__.'/assets/css/site.css',['vars'=>$vars, 'minify'=>false]);
+	$css = csscrush_file(__DIR__.'/assets/css/site.css',['vars'=>$vars, 'minify'=>false, 'enable'=>$plugins]);
 	wp_enqueue_style ( 'site', $css, false);
 
 }
+
+add_filter('wp_nav_menu_items', 'do_shortcode'); // add shortcodes to menus

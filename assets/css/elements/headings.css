@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
-  color: @headings-color;
+  color: black;
   margin: 10px;
   small {
     font-size: 0.8;
@@ -22,8 +22,11 @@ h1, h2, h3, h4, h5, h6,
 	margin: 10px 0;
 }
 .invert{
-	color: @body-bg;
+	color: $(primary);
 }
 .light{
-	color: mix(@headings-color, @body-bg, 50%);
+	color: white;
+	&.shadow{
+		text-shadow: 1px 1px 0 black;
+	}
 }

@@ -1,22 +1,22 @@
 @set {
 /* 	colours */
-	background: white;   		
-	dark: #333;
-	light: #F4F2E2;
+	background: white;  
 	primary: red;
-	secondary: blue;
+/* rounding */
+	rounding: 0;
 /* font sizes */
 	base_font_size:16px;
 	small_heading:20px;
 	medium_heading:34px;
 	large_heading:42px;
 	huge_heading:60px;
-
 }
+
 /* helpers */
 @import "helpers/reset.css";
 @import "helpers/helper.css";
 @import "helpers/grid.css";
+@import "helpers/loader.css";
 /* elements */
 @import "elements/buttons.css";
 @import "elements/dividers.css";
@@ -24,10 +24,15 @@
 @import "elements/images.css";
 @import "elements/links.css";
 @import "elements/lists.css";
+@import "elements/placeholder.css";
 /* components */
+@import "components/forms.css";
+@import "components/panels.css";
+@import "components/sliders.css";
 /* sections */
 @import "sections/header.css";
 @import "sections/nav.css";
+@import "sections/footer.css";
 
 body {
   font-size:  $(base_font_size);
@@ -37,13 +42,25 @@ body {
   background-color: $(background);
 }
 
+p{
+	margin: 3% 5%;
+	line-height: 1.5;
+}
 main{
 position: relative;
-margin: auto;
-margin: 75px auto 0;
+margin: 20px auto;
+margin: 55px auto 0;
 width: 100%;
-	@media only screen and ( max-width: 777px ) {
-		width: 100%;
-	}
 }
-
+@media screen and ( max-width: 500px ) {
+  main{
+width: 90%;
+margin: 60px auto 0;
+}
+.empty{
+	display: none;
+}
+.so-widget-sow-image{
+	text-align: center;
+}
+}

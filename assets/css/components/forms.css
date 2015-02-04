@@ -1,0 +1,138 @@
+form {
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    padding: 10px;
+  }
+  h2 {
+    margin: 0;
+  }
+  header {
+    border-bottom: 1px dotted #ccc;
+    margin: 0 0 10px 0;
+  }
+  header div {
+    margin: 0 0 10px 0;
+  }
+  .element_id{
+	  display: none;
+  }
+
+}
+.dark form{
+	textarea, input[type] {
+    background: rgba(0, 0, 0, 0.65);
+	}  
+  }
+fieldset {
+  span {
+    display: block;
+    padding: 2px;
+  }
+}
+
+legend {
+  padding: 5px;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=url],
+textarea,
+select {
+  width: 100%;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+textarea {
+	padding:12px;
+}
+
+#waspnet{display: none;}
+
+.nform_res{ text-align: center;}
+label{
+	display: none;
+}
+
+textarea {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 5px 11px;
+}
+
+
+input[type="search"] {
+  -webkit-appearance: none !important; /* removes rounded corners for searchfields on iOS */
+}
+select{
+ height: 40px; 
+}
+
+label {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 2.4;
+  }
+
+/* @fragment input-placeholder($(primary), .form-control); */
+
+
+.form-control {
+  border: 2px solid $(primary);
+  color: $(primary);
+  font-family: @font-family-base;
+  font-size: @input-font-size-base;
+  line-height: @input-line-height-base;
+  padding: 8px 12px;
+  
+  border-radius: @input-border-radius;
+  box-shadow: none;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+
+  &:focus {
+    border-color: $(primary);
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: @input-bg-disabled;
+    border-color: mix(@gray, white, 40%);
+    color: mix(@gray, white, 40%);
+    cursor: default;
+    opacity: .7;
+  }
+}
+
+.form-control-feedback {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  margin-top: 1px;
+  line-height: 36px;
+  font-size: @input-icon-font-size;
+  color: desaturate(lighten($(primary), 45%), 15%);
+  background-color: transparent;
+  padding: 0 12px 0 0;
+  border-radius: @input-border-radius;
+}
+
+.help-block {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: mix($(primary), @gray-light, 60%);
+}
+
+.form-group {
+  position: relative;
+}
+
+

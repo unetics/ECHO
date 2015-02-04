@@ -1,6 +1,6 @@
 nav {
   background-color: $(primary);
-  color: $(light);
+  color: $(primary_contrast);
   display: block;
   width: 100%;
   text-align:center; 
@@ -15,21 +15,26 @@ nav {
     padding: 0;
     text-align: right;
     z-index: 10000;
+    font-size: 0;
     li {
       display: inline-block;
       list-style-type: none;
       transition: all 0.2s; 
         &.current-menu-item a{
-			color: white;
+			color: l-adjust( $(primary) 50 );
+			text-shadow: 0 1px 0 $(primary_contrast);
         }
         &.current-parent-item a{
-			color: white;
+			color: l-adjust( $(primary) 50 );
+			text-shadow: 0 1px 0 $(primary_contrast);
         }
         &.logo{
 	        float: left;
+	        
 	        a{line-height: 1;
-		        margin: 2px;
+		        margin: 2px 0;
 		        padding: 0 10px;
+		        border-right: 1px solid l-adjust( $(primary) -10 ); 
 	        }
 	        img{margin: 0;
 		        max-height: 50px;
@@ -39,21 +44,23 @@ nav {
         }
         a{
 	       color: @body-bg;
-			color: #a4a4a4;
+			color: $(primary_contrast);
 			display: block;
 			line-height: 56px;
 			text-decoration: none;
 			overflow: hidden;
-			border-right: 1px solid l-adjust( $(primary) -10 );
+			border-left: 1px solid l-adjust( $(primary) -10 );
+			margin-left: 0;
 			padding-left: 35px;
 			padding-right: 35px;
 			font-size: 14px;
 			text-overflow: ellipsis;
-			text-shadow: 0 -1px 0 #292929;
+			text-shadow: 0 1px 0 l-adjust( $(primary) 15 );
 			white-space: nowrap;
 			box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
 			span{
-				color: @brand-secondary;
+				color: white;
+				text-shadow: 0px 1px 0px black;
 			}
         }
     }
@@ -61,7 +68,7 @@ nav {
 		box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.065), inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
 	}
 	li:hover > a{
-          color: @body-bg;
+          background: l-adjust( $(primary) 5 );
         }
 
 
@@ -112,8 +119,7 @@ nav {
 	position:fixed;
 	width:100%;
 	text-align: center;
-	
-	background-color: @brand-primary;
+	background-color: $(primary);
 }
 
 .rmm ul {
@@ -139,6 +145,12 @@ nav {
 .rmm .rmm-toggled ul li {
 	display:block;
 	margin:0 auto !important;
+	&.logo{
+		display: none;
+	}
+	&.current-menu-item{
+		background: l-adjust( $(primary) -10 );
+	}
 }
 
 .rmm .rmm-toggled {
@@ -172,14 +184,13 @@ nav {
 	background:white;
 	width:24px;
 }
-.rmm .rmm-toggled ul li:hover {
-	background: darken( @brand-primary, 10%);
+.rmm .rmm-toggled ul li:hover a {
+	background: l-adjust( $(primary) -10 ) !important;
 }
 .rmm .rmm-toggled ul li a {
 	display:block;
 	width:100%;
 	text-align:center;
 	padding:10px 0px 10px 0px;
-	border-top: 1px solid @body-bg;
-	color: @body-bg;
+	border-top: 1px solid $(primary_contrast);
 }

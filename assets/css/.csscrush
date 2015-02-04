@@ -4,23 +4,26 @@
             "helpers\/reset.css",
             "helpers\/helper.css",
             "helpers\/grid.css",
+            "helpers\/loader.css",
             "elements\/buttons.css",
             "elements\/dividers.css",
             "elements\/headings.css",
             "elements\/images.css",
             "elements\/links.css",
             "elements\/lists.css",
+            "elements\/placeholder.css",
+            "components\/forms.css",
+            "components\/panels.css",
+            "components\/sliders.css",
             "sections\/header.css",
-            "sections\/nav.css"
+            "sections\/nav.css",
+            "sections\/footer.css"
         ],
-        "datem_sum": 17046123326,
+        "datem_sum": 25577602612,
         "options": {
             "vars": {
-                "background": "#eeeeee",
-                "dark": "#222222",
-                "light": "#dddddd",
-                "primary": "#dddddd",
-                "secondary": "#ef733e"
+                "primary": "#1b9af7",
+                "primary_contrast": "black"
             },
             "minify": false,
             "formatter": null,
@@ -34,7 +37,9 @@
             "doc_root": null,
             "vendor_target": "all",
             "rewrite_import_urls": true,
-            "plugins": null,
+            "plugins": [
+                "forms"
+            ],
             "settings": [],
             "stat_dump": false,
             "source_map": false,

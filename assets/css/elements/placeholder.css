@@ -1,0 +1,7 @@
+@fragment input-placeholder {
+  #(1)::-webkit-input-placeholder { color: #(0); }
+  #(1):-moz-placeholder           { color: #(0); }
+  #(1)::placeholder               { color: #(0); }
+  #(1).placeholder-state          { color: #(0); }
+}
+
