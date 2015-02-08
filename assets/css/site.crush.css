@@ -378,6 +378,22 @@ br.clear {
     }
 }
 
+::selection {
+    background: #1b9af7;
+    color: #FFF;
+    text-shadow: none;
+    }
+::-moz-selection {
+    background: #1b9af7;
+    color: #FFF;
+    text-shadow: none;
+    }
+::-webkit-selection {
+    background: #1b9af7;
+    color: #FFF;
+    text-shadow: none;
+    }
+
 /* elements */
 .btn span {
     color: #1b9af7;
@@ -541,8 +557,8 @@ h6 small,
     font-size: 20px;
     }
 .fit {
-    width: 96%;
-    padding: 2%;
+    width: 98%;
+    padding: 1%;
     margin: auto;
     }
 .heading {
@@ -1166,6 +1182,13 @@ p {
     margin: 3% 5%;
     line-height: 1.5;
     }
+
+/*
+p[max-width="200px"] {
+    padding: 0;
+    background: red;
+}
+*/
 main {
     position: relative;
     margin: 20px auto;
@@ -1182,5 +1205,11 @@ main {
     }
 .so-widget-sow-image {
     text-align: center;
+    }
+}
+
+@ifeq nodt testy {
+p {
+    color: donkey;
     }
 }

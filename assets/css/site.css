@@ -17,6 +17,7 @@
 @import "helpers/helper.css";
 @import "helpers/grid.css";
 @import "helpers/loader.css";
+@import "helpers/select.css";
 /* elements */
 @import "elements/buttons.css";
 @import "elements/dividers.css";
@@ -46,12 +47,20 @@ p{
 	margin: 3% 5%;
 	line-height: 1.5;
 }
+
+/*
+p[max-width="200px"] {
+    padding: 0;
+    background: red;
+}
+*/
 main{
 position: relative;
 margin: 20px auto;
 margin: 55px auto 0;
 width: 100%;
 }
+
 @media screen and ( max-width: 500px ) {
   main{
 width: 90%;
@@ -63,4 +72,9 @@ margin: 60px auto 0;
 .so-widget-sow-image{
 	text-align: center;
 }
+}
+@ifeq nodt testy{
+  p {
+    color: donkey;
+  }
 }

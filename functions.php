@@ -5,7 +5,7 @@ function parent_prefix_load_classes()
 {
 	$primaryContrast = getContrastYIQ(tr_option_field("[primary]"));	
 
-	$vars = [];
+	$vars = array();
 	$vars['primary'] = tr_option_field("[primary]");
 	$vars['primary_contrast'] = $primaryContrast;
 	$vars['rounding'] = tr_option_field("[rounding]");
@@ -17,9 +17,9 @@ function parent_prefix_load_classes()
 	$vars['huge_heading'] = tr_option_field("[huge_heading]");
 
 	$vars = array_filter($vars, 'strlen'); // removes unset array values
-	$plugins = ['forms'];
+// 	$plugins = ['forms'];
 	
-	$css = csscrush_file(__DIR__.'/assets/css/site.css',['vars'=>$vars, 'minify'=>false, 'enable'=>$plugins]);
+	$css = csscrush_file(__DIR__.'/assets/css/site.css',array('vars'=>$vars, 'minify'=>false));
 	wp_enqueue_style ( 'site', $css, false);
 
 }

@@ -16,7 +16,11 @@ h1, h2, h3, h4, h5, h6,
 .medium_heading { font-size: $(medium_heading); } 
 .small_heading { font-size: $(small_heading); } 
 
-.fit {width: 96%;padding: 2%; margin: auto;}
+.fit {
+	width: 98%;
+	padding: 1%; 
+	margin: auto;
+	}
 
 .heading{
 	margin: 10px 0;
