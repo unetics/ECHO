@@ -1207,9 +1207,3 @@ main {
     text-align: center;
     }
 }
-
-@ifeq nodt testy {
-p {
-    color: donkey;
-    }
-}

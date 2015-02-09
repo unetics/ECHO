@@ -24,7 +24,8 @@
         "options": {
             "vars": {
                 "primary": "#1b9af7",
-                "primary_contrast": "black"
+                "primary_contrast": "black",
+                "rounding": "0"
             },
             "minify": false,
             "formatter": null,
@@ -38,9 +39,7 @@
             "doc_root": null,
             "vendor_target": "all",
             "rewrite_import_urls": true,
-            "plugins": [
-                "forms"
-            ],
+            "plugins": null,
             "settings": [],
             "stat_dump": false,
             "source_map": false,
