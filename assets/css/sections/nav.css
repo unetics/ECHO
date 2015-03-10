@@ -6,7 +6,7 @@ nav {
   text-align:center; 
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 750;
   box-shadow: 0px 0px 1px #333;
   font-weight: 300;
   line-height: 1;
@@ -14,7 +14,7 @@ nav {
     margin: 0;
     padding: 0;
     text-align: right;
-    z-index: 10000;
+    z-index: 750;
     font-size: 0;
     li {
       display: inline-block;
@@ -145,6 +145,7 @@ nav {
 .rmm .rmm-toggled ul li {
 	display:block;
 	margin:0 auto !important;
+	position: relative;
 	&.logo{
 		display: none;
 	}
@@ -155,6 +156,16 @@ nav {
 
 .rmm .rmm-toggled {
 	min-height:56px;
+}
+
+.rmm .rmm-toggled .sub-toggle{
+	line-height: 100%;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	font-size: 20px;	
+	top: 28px;
+	right: 16px;
 }
 .rmm .rmm-toggled-controls {
 	display:block;
@@ -184,8 +195,8 @@ nav {
 	background:white;
 	width:24px;
 }
-.rmm .rmm-toggled ul li:hover a {
-	background: l-adjust( $(primary) -10 ) !important;
+.rmm .rmm-toggled>ul>li:hover a {
+	background: l-adjust( $(primary) 10 ) !important;
 }
 .rmm .rmm-toggled ul li a {
 	display:block;
@@ -194,3 +205,24 @@ nav {
 	padding:10px 0px 10px 0px;
 	border-top: 1px solid $(primary_contrast);
 }
+
+.rmm .rmm-toggled .sub-menu li{
+	background: l-adjust( $(primary) -10 ) !important;
+	a{&:hover{
+		background: l-adjust( $(primary) -15 ) !important;
+	}}
+}
+
+
+.icon-plus {
+/* 	 background: svg-data(plus); */
+	 color: $(primary_contrast);
+	 font-weight: lighter;
+}
+
+.icon-minus {
+/* 	background: svg-data(plus); */
+color: $(primary_contrast);
+}
+
+

@@ -2,6 +2,8 @@
 /* 	colours */
 	background: white;  
 	primary: red;
+	dark: #222;
+	light: #eee;
 /* rounding */
 	rounding: 0;
 /* font sizes */
@@ -10,6 +12,29 @@
 	medium_heading:34px;
 	large_heading:42px;
 	huge_heading:60px;
+/* 	new canvas */
+	theme-color:                   $(primary);
+	body-color:                    #555;
+	heading-color:                 #444;
+	
+	body-font:                     'Lato', sans-serif;
+	heading-font:                  'Raleway', sans-serif;
+	secondary-font:                'Crete Round', serif;
+	
+	primary-menu-font:             	'Raleway', sans-serif;
+	primary-menu-font-weight:      	bold;
+	primary-menu-font-size:        	13px;
+	primary-menu-font-color:       	#444;
+	primary-menu-font-spacing:     	1px;
+	
+	primary-menu-submenu-width:            220px;
+	primary-menu-submenu-font:             'Lato', sans-serif;
+	primary-menu-submenu-font-size:        12px;
+	primary-menu-submenu-font-weight:      600;
+	
+	mega-menu-title:               'Raleway', sans-serif;
+	
+	header-height:                 100px;
 }
 
 /* helpers */
@@ -18,6 +43,7 @@
 @import "helpers/grid.css";
 @import "helpers/loader.css";
 @import "helpers/select.css";
+@import "helpers/svg.css";
 /* elements */
 @import "elements/buttons.css";
 @import "elements/dividers.css";
@@ -26,13 +52,19 @@
 @import "elements/links.css";
 @import "elements/lists.css";
 @import "elements/placeholder.css";
+@import "elements/modal.css";
 /* components */
 @import "components/forms.css";
 @import "components/panels.css";
 @import "components/sliders.css";
 /* sections */
 @import "sections/header.css";
+@ifset navFixed {
 @import "sections/nav.css";
+}
+@ifset navFixedTrans {
+@import "sections/navTrans.css";
+}
 @import "sections/footer.css";
 
 body {
@@ -44,16 +76,10 @@ body {
 }
 
 p{
-	margin: 3% 5%;
+	margin: 5px;
 	line-height: 1.5;
 }
 
-/*
-p[max-width="200px"] {
-    padding: 0;
-    background: red;
-}
-*/
 main{
 position: relative;
 margin: 20px auto;
@@ -73,8 +99,5 @@ margin: 60px auto 0;
 	text-align: center;
 }
 }
-@ifeq nodt testy{
-  p {
-    color: donkey;
-  }
-}
+
+

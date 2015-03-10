@@ -9,7 +9,7 @@
   } 
   &.center{
   	  display: table;
-	  margin: 5px auto;
+	  margin: 10px auto;
 	  padding:
   }
   &.block {
@@ -20,28 +20,7 @@
   &.primary {
 	  background-color: $(primary);
   }
-  &.secondary {
-	  color: $(secondary_contrast);
-	  background-color: $(secondary);
-	    &:hover,
-		&:focus {
-			color: $(secondary_contrast)-red;
-			background: l-adjust( $(secondary) -15 );
-				}
-		span{ color: $(primary); }
-	  }
-  &.ghost {
-	  color: $(primary);
-	  background-color: none;
-	  background: none;
-	  border: solid 2px $(primary);
-	    &:hover,
-		&:focus {
-			color: $(light);
-			background: $(primary);
-				}
-		span{ color: $(secondary); }
-		  }
+
   &.link {
 	  color: $(primary);
 	  background-color: none;  
@@ -55,6 +34,9 @@
 		span{ color: $(secondary); }
   		}
 }
+
+
+
 .btn {
 	border: none;
 	margin: 10px;
@@ -72,48 +54,100 @@
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	color: #fff;
 	border-radius: $(rounding)px;
-	}
-	
-.btn:active {
-	padding-top: 15px;
-    margin-bottom: 9px;
-}
-.btn, .btn:hover, .btn:active {
-	outline: 0 none;
-	text-decoration: none;
-	color: #fff;
-}
-
-.btn {
 	background-color: $(primary);
 	box-shadow: 0px 3px 0px 0px l-adjust( $(primary) -15 );
-}
-.btn:hover {
+	text-decoration: none;
+	&:hover {
 	background-color: l-adjust( $(primary) -5 );
 }
-.btn:active {
-	box-shadow: 0px 1px 0px 0px l-adjust( $(primary) -15 );
+	&.black{ 
+		color: white;
+		background: black;
+		box-shadow: 0px 3px 0px 0px #777;
+	    &:hover, &:focus {
+	  	color: white;
+		background: black;
+		}
+	}
+	&.white{ 
+		color: black;
+		background: white;
+		box-shadow: 0px 3px 0px 0px #ddd;
+		text-shadow: none;
+	  &:hover, &:focus {
+	  	color: black;
+		background: #eee;
+		}
+	}	
+	
+	&.ghost {
+	  color: $(primary);
+	  text-shadow: none;
+	  background-color: none;
+	  background: none;
+	  border: solid 2px $(primary);
+	  box-shadow: none;
+	  
+	  &:hover, &:focus {
+	  	color: white;
+		background: $(primary);
+		}
+	&.black{ 
+		  color: black;
+		  border: solid 2px black;
+	  &:hover, &:focus {
+	  	color: white;
+		background: black;
+		}
+	}
+	&.white{ 
+		color: white;
+		border: solid 2px white;
+	  &:hover, &:focus {
+	  	color: black;
+		background: white;
+		}
+	}		
+	}
+
+	&.link {
+	  color: $(primary);
+	  text-shadow: none;
+	  background-color: none;
+	  background: none;
+	  border: none;
+	  box-shadow: none;
+	  border-bottom: 1px solid $(primary);
+	  &:hover, &:focus {
+	  	background: none;
+		text-decoration: none;
+		border-bottom: 1px solid $(primary);
+		}
+	&.black{ 
+		  color: black;
+		  border-bottom: 1px solid black;
+	  &:hover, &:focus {
+	  	border-bottom: 1px solid $(primary);
+		}
+	}
+	&.white{ 
+		color: white;
+		border-bottom: 1px solid white;
+	  &:hover, &:focus {
+	  	border-bottom: 1px solid $(primary);
+		}
+	}		
+	}
+
+	
+}
+	
+.btn.default:active {
+	padding-top: 15px;
+    margin-bottom: 9px;
+    box-shadow: 0px 1px 0px 0px l-adjust( $(primary) -15 );
 }
 
 
-.btn-2 {
-	background-color: #f06060;
-	box-shadow: 0px 3px 0px 0px #cd1313;
-}
-.btn-2:hover {
-	background-color: #ed4444;
-}
-.btn-2:active {
-	box-shadow: 0px 1px 0px 0px #cd1313;
-}
 
-.btn-3 {
-	background-color: #ff6a80;
-	box-shadow: 0px 3px 0px 0px #da0020;
-}
-.btn-3:hover {
-	background-color: #ff566f;
-}
-.btn-3:active {
-	box-shadow: 0px 1px 0px 0px #da0020;
-}
+

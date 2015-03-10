@@ -1,4 +1,6 @@
 hr{
+	margin: 0;
+	padding: 5px;
 	&.invisible{
 		border: none;
 	}
