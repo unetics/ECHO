@@ -294,12 +294,13 @@ br.clear {
     }
 .panel-row-style {
     max-width: 1020px;
-    padding: 0 5%;
     margin: auto;
+    }
+.panel-row-style.standard-row {
+    padding: 0 5%;
     }
 .panel-row-style.full-row {
     max-width: 100%;
-    padding: 0;
     }
 .full .panel-row-style {
     max-width: 100%;
@@ -1285,7 +1286,6 @@ main {
     }
 @media screen and (max-width: 500px) {
 main {
-    width: 90%;
     margin: 60px auto 0;
     }
 .empty {

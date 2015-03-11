@@ -57,11 +57,12 @@
 
 .panel-row-style{
 	max-width: 1020px;
-	padding:0 5%;
 	margin: auto;
+	&.standard-row{
+		padding:0 5%;
+	}
 	&.full-row{
 		max-width: 100%;
-		padding: 0;
 	}
 }
 

@@ -89,7 +89,6 @@ width: 100%;
 
 @media screen and ( max-width: 500px ) {
   main{
-width: 90%;
 margin: 60px auto 0;
 }
 .empty{
