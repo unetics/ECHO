@@ -47,7 +47,6 @@
 }
 }
 
-//makes .even divs fill available space
 .even .panel-grid-cell{
 	height: 100%;
 	.panel{
@@ -58,9 +57,11 @@
 
 .panel-row-style{
 	max-width: 1020px;
+	padding:0 5%;
 	margin: auto;
 	&.full-row{
 		max-width: 100%;
+		padding: 0;
 	}
 }
 
