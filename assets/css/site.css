@@ -16,25 +16,17 @@
 	theme-color:                   $(primary);
 	body-color:                    #555;
 	heading-color:                 #444;
-	
-	body-font:                     'Lato', sans-serif;
-	heading-font:                  'Raleway', sans-serif;
-	secondary-font:                'Crete Round', serif;
-	
-	primary-menu-font:             	'Raleway', sans-serif;
-	primary-menu-font-weight:      	bold;
-	primary-menu-font-size:        	13px;
-	primary-menu-font-color:       	#444;
-	primary-menu-font-spacing:     	1px;
-	
-	primary-menu-submenu-width:            220px;
-	primary-menu-submenu-font:             'Lato', sans-serif;
-	primary-menu-submenu-font-size:        12px;
-	primary-menu-submenu-font-weight:      600;
-	
-	mega-menu-title:               'Raleway', sans-serif;
-	
+		
 	header-height:                 100px;
+	
+}
+@selector heading :any(h1, h2, h3, h4, h5, h6);
+
+@ifset fontSet1{
+	@import "fonts/fontSet1.css";
+}
+@ifset fontSet2{
+	@import "fonts/fontSet2.css";
 }
 
 /* helpers */
@@ -68,17 +60,10 @@
 @import "sections/footer.css";
 
 body {
-  font-size:  $(base_font_size);
-  font-family: sans-serif;
-  line-height: 1;
   color: $(dark);
   background-color: $(background);
 }
 
-p{
-	margin: 5px;
-	line-height: 1.5;
-}
 
 main{
 position: relative;

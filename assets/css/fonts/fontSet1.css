@@ -1,0 +1,30 @@
+:heading.shadow {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 1.1;
+    }
+:heading {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    }
+body{
+    font-family: 'EB Garamond', serif;
+    line-height: 2;
+    }
+    
+@set {
+	
+	primary-menu-font:             	'EB Garamond', sans-serif;
+	primary-menu-font-weight:      	bold;
+	primary-menu-font-size:        	13px;
+	primary-menu-font-color:       	#444;
+	primary-menu-font-spacing:     	1px;
+	
+	primary-menu-submenu-width:            220px;
+	primary-menu-submenu-font:             'Lato', sans-serif;
+	primary-menu-submenu-font-size:        12px;
+	primary-menu-submenu-font-weight:      600;
+	
+	}

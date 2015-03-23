@@ -26,6 +26,18 @@ function generateCss()
         break;
 	}
 
+	//fonts
+	switch (tr_option_field("[fonts]")) {
+    case "none":
+        break;
+    case 1:
+        $vars['fontSet1'] = true;
+        break;
+    case 2:
+        $vars['fontSet2'] = true;
+        break;
+	}
+
 	$vars = array_filter($vars, 'strlen'); // removes unset array values
 	$plugins = array('svg');
 	

@@ -1,6 +1,32 @@
 /*
  * http://github.com/peteboere/css-crush (v2.3.0)
  */
+h1.shadow,
+h2.shadow,
+h3.shadow,
+h4.shadow,
+h5.shadow,
+h6.shadow {
+    font-family: 'Dancing Script',cursive;
+    font-weight: 700;
+    line-height: 1.1;
+    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'EB Garamond',serif;
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    }
+body {
+    font-family: 'EB Garamond',serif;
+    line-height: 2;
+    }
+
 /* helpers */
 * {
     -webkit-box-sizing: border-box;
@@ -1268,15 +1294,8 @@ footer .inner p {
     padding: 10px;
     }
 body {
-    font-size: 16px;
-    font-family: sans-serif;
-    line-height: 1;
     color: #222;
     background-color: white;
-    }
-p {
-    margin: 5px;
-    line-height: 1.5;
     }
 main {
     position: relative;
