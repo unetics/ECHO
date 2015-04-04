@@ -34,7 +34,7 @@
 @import "helpers/helper.css";
 @import "helpers/grid.css";
 @import "helpers/loader.css";
-@import "helpers/select.css";
+/* @import "helpers/select.css"; */
 @import "helpers/svg.css";
 /* elements */
 @import "elements/buttons.css";

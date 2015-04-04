@@ -60,3 +60,4 @@ if(isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] == 'develop
 }else{
 	add_action( 'updateCss', 'generateCss');
 }
+

@@ -1,29 +1,87 @@
 footer {
-  
-  color: $(background);
+  background-color: #333;
+  color: #CCC;
+  position: relative;
+  border-top: 5px solid rgba(0,0,0,0.2);
   font-size: 12px;
   padding: 0;
   width: 100%;
   min-height: 30px;
-  .inner{
-	  max-width: 1020px;
-	  margin: -10px auto;
-	  color: $(light);
-	  text-align: center;
-	  background-color:$(primary);
-
+ .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+ }
   a {
     color: mix(@brand-primary, @body-bg, 50%);
     font-weight: normal;
   }
-  p {
-    font-size: 15px;
-    line-height: 20px;
-    margin: 10px;
-    padding: 10px;
-  }
-	  
-  }
 
 }
 
+.copyrights {
+  background-color: rgba(0,0,0,0.2);
+  color: #7d7d7d;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+
+.col{
+  display: block;
+  position: relative;
+  margin: 1%;
+  margin-bottom: 20px;
+  float: left;
+}
+.one_third {
+  width: 31%;
+}
+.half {
+  width: 48%;
+}
+
+@media (min-width: 1200px){
+.container {
+  width: 1170px;
+}
+}
+@media (max-width: 767px){
+.col {
+  width: 100%;
+  margin: 0;
+  float: none;
+  margin-bottom: 50px !important;
+}
+}
+.copyrights-menu{
+	text-align: center;
+}
+
+.copyright-links a {
+	
+	font-size: 14px;
+	text-decoration: none;
+  display: inline-block;
+  margin: 0 3px;
+  color: #7d7d7d;
+  &:hover{
+	  color: #eee;
+  }
+  &:after {
+  content: "/";
+  float: right;
+  line-height: 27px;
+  font-size: 25px;
+  margin: 0 7px;
+  color: #444;
+	}
+
+ &:last-child:after {
+	display: none;
+}
+}
