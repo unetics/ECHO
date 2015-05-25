@@ -40,7 +40,7 @@
 				$email = get_bloginfo('admin_email');
 				$message = "You received an inquiry from ";
 				$message .= $_POST['message_email'];
-				$message .= " about the image";
+				$message .= " about the image ";
 				$message .= $_POST['image'];
 				$sent = wp_mail($email, 'Image Inquiry', $message);
 				if($sent){
