@@ -1,0 +1,239 @@
+.popup {
+  display: block;
+}
+.popup .icon-view:before {
+  content: '\002B';
+}
+.popup .icon-view {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 3;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  color: #fff;
+  opacity: 0;
+  visibility: visible;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 50px; // a third of the gallery img height ☐add dynamicly with less
+}
+.popup .overlay {
+  visibility: hidden;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.popup:hover .overlay {
+  visibility: visible;
+  background: #000;
+}
+.popup:hover .icon-view {
+  opacity: 0.8;
+}
+.image-gallery {
+  margin: 0;
+  padding: 0;
+}
+.image-gallery li {
+  display: inline-block;
+  padding: 0 20px 20px 0;
+  margin: 0;
+}
+.image-gallery a {
+  position: relative;
+  display: block;
+}
+.image-gallery a img {
+  display: block;
+}
+.image-gallery ul {
+  margin-bottom: 0;
+}
+
+.js-masonry{
+  margin: 20px auto;
+}
+.js-masonry .item {
+
+}
+/* Common style */
+figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+	pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+figure h2 span {
+	font-weight: 800;
+}
+
+figure h2,
+figure p {
+	margin: 0;
+}
+
+figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+	
+	
+	
+figure {
+	background: #21284f;
+}
+
+figure img {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	width: 100%;
+	margin: 0;
+}
+
+
+figure:hover img {
+	opacity: 0.4;
+}
+figure figcaption > a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+figure figcaption::before {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: #fff;
+	content: '';
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+
+figure h2 {
+	position: absolute;
+	color: white;
+	bottom: 0;
+	left: 0;
+	padding: 1em 1.5em;
+	width: 100%;
+	text-align: left;
+	-webkit-transform: translate3d(0,-30px,0);
+	transform: translate3d(0,-30px,0);
+	text-shadow: 0px 2px 1px black;
+}
+
+figure figcaption::before,
+figure h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure:hover figcaption::before,
+figure:hover h2 {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}	
+
+#lg-gallery .close i:after, #lg-close:after {
+  font-style: normal;
+  font-size: 16px;
+}
+
+#lg-gallery .close {
+  color: #FFFFFF;
+  display: block;
+  float: right !important;
+  width: 28px;
+  position: relative;
+  height: 28px;
+  border-radius: 2px;
+  margin-top: -4px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.65);
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  z-index: 1090;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 6px;
+}
+
+#lg-gallery .close i:after {
+  left: 6px;
+  position: absolute;
+  top: 4px;
+}

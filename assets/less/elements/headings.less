@@ -1,0 +1,35 @@
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.5;
+  color: black;
+  margin: 10px;
+  small {
+    font-size: 0.8;
+  }
+}
+
+.huge_heading{ font-size: @huge_heading; } 
+.large_heading { font-size: @large_heading; } 
+.medium_heading { font-size: @medium_heading; } 
+.small_heading { font-size: @small_heading; } 
+
+.fit {
+	width: 98%;
+	padding: 1%; 
+	margin: auto;
+	}
+
+.heading{
+	margin: 10px 0;
+}
+.invert{
+	color: @primary;
+}
+.light{
+	color: white;
+	&.shadow{
+		text-shadow: 1px 1px 0 black;
+	}
+}

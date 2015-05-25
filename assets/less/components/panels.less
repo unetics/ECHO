@@ -1,0 +1,21 @@
+.widget_panel > div{
+	box-sizing: border-box;
+	padding: 40px;
+	margin: 10px;
+	border-radius: unit(@rounding, px);
+	p{
+		font-size: 22px;
+		padding: 0;
+	}
+	&.default{
+		color: @primary;
+		background: lighten(@accent, 35%);
+		h3{
+		color: @primary;
+		}
+	}
+	&.primary{
+		background: @primary;
+		color: white;
+		}
+}

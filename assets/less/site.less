@@ -1,0 +1,72 @@
+/* 	colours */
+@background: white;  
+@primary: green;
+@accent: red;
+@font: #333;
+
+@gray: #777;
+@dark: #222;
+@light: #eee;
+/* rounding */
+@rounding: 0;
+/* font sizes */
+@base_font_size:16px;
+@small_heading:20px;
+@medium_heading:34px;
+@large_heading:42px;
+@huge_heading:60px;
+/* 	new canvas */
+@theme-color:                   @primary;
+@body-color:                    #555;
+@heading-color:                 #444;	
+@header-height:                 100px;
+
+
+/* helpers */
+@import "helpers/reset";
+@import "helpers/helper";
+@import "helpers/grid";
+@import "helpers/loader";
+@import "helpers/bootstrapnav";
+/* elements */
+
+@import "elements/buttons";
+@import "elements/dividers";
+@import "elements/headings";
+@import "elements/images";
+@import "elements/links";
+@import "elements/lists";
+@import "elements/placeholder";
+@import "elements/modal";
+
+/* components */
+@import "components/forms";
+@import "components/panels";
+@import "components/sliders";
+@import "components/gallery";
+
+/* sections */
+@import "sections/header";
+@import "sections/footer";
+
+body {
+  color: @font;
+  background-color: @background;
+}
+
+main{
+position: relative;
+width: 100%;
+}
+
+@media screen and ( max-width: 500px ) {
+  main{
+margin: 60px auto 0;
+}
+.empty{
+	display: none;
+}
+.so-widget-sow-image{
+	text-align: center;
+}
+}
