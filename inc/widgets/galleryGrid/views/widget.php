@@ -36,9 +36,13 @@
 		</div>
 	</div>
 				
-	<?php		if (!empty($_POST)){	
-				$message = print_r($_POST);
-				$sent = wp_mail('mitchell.bray@gmail.com', 'images', $message);
+	<?php		if (!empty($_POST['message_email'])){	
+				$email = get_bloginfo('admin_email');
+				$message = "You received an inquiry from ";
+				$message .= $_POST['message_email'];
+				$message .= " about the image";
+				$message .= $_POST['image'];
+				$sent = wp_mail($email, 'Image Inquiry', $message);
 				if($sent){
 // 					echo("success"); 
 					}//message sent!
