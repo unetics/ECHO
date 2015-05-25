@@ -36,8 +36,9 @@
 		</div>
 	</div>
 				
-	<?php		if (!empty($_POST)){		
-				$sent = wp_mail('mitchell.bray@gmail.com', 'images', 'donkey');
+	<?php		if (!empty($_POST)){	
+				$message = print_r($_POST);
+				$sent = wp_mail('mitchell.bray@gmail.com', 'images', $message);
 				if($sent){
 // 					echo("success"); 
 					}//message sent!
