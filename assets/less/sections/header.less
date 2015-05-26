@@ -1,7 +1,7 @@
 @nav-mobilebp: 768px;
 @nav-container-height: 100px;
 @scroll-nav-container-height: 60px;
-@top-level-font-size: 14px;
+@top-level-font-size: 			16px;
 @nav-background: 				white;
 @nav-background-scroll:			white;
 @topmenu-etp-background: 		black;
@@ -56,7 +56,8 @@
 
 }
 .sm-nav>li {
-  .nav_padding(@nav-container-height);
+	font-size: @top-level-font-size;
+	.nav_padding(@nav-container-height);
   	&.current-menu-item, &.current-menu-ancestor, &.current-menu-parent{
 	  	a{color: @menu-link-color-active;}
   	}
