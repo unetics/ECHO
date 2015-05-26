@@ -62,3 +62,45 @@ text-align: justify;
 }
 
 .slabtexted .slabtext{display:-moz-inline-box;display:inline-block;white-space:nowrap}.slabtextinactive .slabtext{display:inline;white-space:normal;font-size:1em !important;letter-spacing:inherit !important;word-spacing:inherit !important;*letter-spacing:0 !important;*word-spacing:0 !important;}.slabtextdone .slabtext{display:block;line-height:0.9;}
+
+//
+// Tiles - new way
+// -------------------------------------------------
+
+.tile, .widget_tile{
+  background-color:white;
+  border-radius: @rounding;
+  box-shadow: 0px 0px 2px 0px #6d6d6d;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  li{
+	  font-size: 14px;
+  }
+  &.mh360{
+	  min-height: 360px;
+  }
+  .panel-grid-cell{
+	  padding: 5px !important;
+  }
+	.btn{
+		&.block{
+			margin: 0 0 5px;
+			padding: 10px 30px;
+			box-shadow: 0px 0px 2px 0px #6d6d6d;
+			background: @primary_colour;
+		}
+		&:hover{
+			background: darken(@primary_colour, 20%);
+			border-top: 2px solid lighten(@primary_colour, 20%);
+		}
+	}
+	.widget_widget_sp_image {
+		margin: 0;
+	}
+	p{
+		font-size: 15px;
+		padding: 10px;
+	}
+}
+
