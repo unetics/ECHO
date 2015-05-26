@@ -5,6 +5,10 @@
 @nav-background: 				white;
 @nav-background-scroll:			white;
 @topmenu-etp-background: 		black;
+
+.nav_padding(@container){
+	padding: ((@container - @top-level-font-size) / 2 ) 0;
+}
 /* ==============================
    1. Global
    ============================== */
@@ -47,16 +51,12 @@
   	background: @nav-background-scroll !important;
   	min-height: @scroll-nav-container-height;
 	max-height: @scroll-nav-container-height;
-	  .sm-nav>li {
-	  	padding-top: (@scroll-nav-container-height/2-@top-level-font-size );
-	  	padding-bottom:(@scroll-nav-container-height/2-@top-level-font-size);
-		}
+	  .sm-nav>li { .nav_padding(@scroll-nav-container-height);	}
 	}
 
 }
 .sm-nav>li {
-  padding-top: (@nav-container-height/2-@top-level-font-size );
-  padding-bottom:(@nav-container-height/2-@top-level-font-size);
+  .nav_padding(@nav-container-height);
   	&.current-menu-item, &.current-menu-ancestor, &.current-menu-parent{
 	  	a{color: @menu-link-color-active;}
   	}

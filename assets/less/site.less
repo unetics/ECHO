@@ -1,8 +1,12 @@
 /* 	colours */
-@background: white;  
-@primary: green;
-@accent: red;
-@font: #333;
+@background_colour: white;  
+@primary_colour: green;
+@accent_colour: red;
+@text_colour: #333333;
+/* old var fallbacks  remove on fridays ☐ */
+@background: @background_colour;  
+@primary: @primary_colour;
+@accent: @accent_colour;
 
 @gray: #777;
 @dark: #222;
@@ -16,7 +20,7 @@
 @large_heading:42px;
 @huge_heading:60px;
 /* 	new canvas */
-@theme-color:                   @primary;
+@theme-color:                   @primary_colour;
 @body-color:                    #555;
 @heading-color:                 #444;	
 @header-height:                 100px;
@@ -50,8 +54,8 @@
 @import "sections/footer";
 
 body {
-  color: @font;
-  background-color: @background;
+  color: @text_colour;
+  background-color: @background_colour;
 }
 
 main{

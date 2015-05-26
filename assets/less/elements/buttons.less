@@ -1,5 +1,5 @@
 .btn {
-  span{ color: @primary; }
+  span{ color: @primary_colour; }
 
   &.left{
 	  float: left;
@@ -17,20 +17,20 @@
   } 
    
   &.primary {
-	  background-color: @primary;
+	  background-color: @primary_colour;
   }
 
   &.link {
-	  color: @primary;
+	  color: @primary_colour;
 	  background-color: none;  
 	  padding: 0;
 	  	&:hover,
 	  	&:focus {
 		    text-decoration: underline;
 		    background-color: transparent;
-		    color: @accent;
+		    color: @accent_colour;
 		  		}
-		span{ color: @accent; }
+		span{ color: @accent_colour; }
   		}
 }
 
@@ -53,11 +53,11 @@
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	color: #fff;
 	border-radius: unit(@rounding, px);
-	background-color: @primary;
-	box-shadow: 0px 3px 0px 0px fadeout( @primary, 15% );
+	background-color: @primary_colour;
+	box-shadow: 0px 3px 0px 0px fadeout( @primary_colour, 15% );
 	text-decoration: none;
 	&:hover {
-	background-color: fadeout( @primary, 5% );
+	background-color: fadeout( @primary_colour, 5% );
 }
 	&.black{ 
 		color: white;
@@ -80,16 +80,16 @@
 	}	
 	
 	&.ghost {
-	  color: @primary;
+	  color: @primary_colour;
 	  text-shadow: none;
 	  background-color: none;
 	  background: none;
-	  border: solid 2px @primary;
+	  border: solid 2px @primary_colour;
 	  box-shadow: none;
 	  
 	  &:hover, &:focus {
 	  	color: white;
-		background: @primary;
+		background: @primary_colour;
 		}
 	&.black{ 
 		  color: black;
@@ -110,30 +110,30 @@
 	}
 
 	&.link {
-	  color: @primary;
+	  color: @primary_colour;
 	  text-shadow: none;
 	  background-color: none;
 	  background: none;
 	  border: none;
 	  box-shadow: none;
-	  border-bottom: 1px solid @primary;
+	  border-bottom: 1px solid @primary_colour;
 	  &:hover, &:focus {
 	  	background: none;
 		text-decoration: none;
-		border-bottom: 1px solid @primary;
+		border-bottom: 1px solid @primary_colour;
 		}
 	&.black{ 
 		  color: black;
 		  border-bottom: 1px solid black;
 	  &:hover, &:focus {
-	  	border-bottom: 1px solid @primary;
+	  	border-bottom: 1px solid @primary_colour;
 		}
 	}
 	&.white{ 
 		color: white;
 		border-bottom: 1px solid white;
 	  &:hover, &:focus {
-	  	border-bottom: 1px solid @primary;
+	  	border-bottom: 1px solid @primary_colour;
 		}
 	}		
 	}
@@ -144,7 +144,7 @@
 .btn.default:active {
 	padding-top: 15px;
     margin-bottom: 9px;
-    box-shadow: 0px 1px 0px 0px fadeout( @primary, 15% );
+    box-shadow: 0px 1px 0px 0px fadeout( @primary_colour, 15% );
 }
 
 
