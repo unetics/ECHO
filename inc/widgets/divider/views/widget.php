@@ -1,1 +1,1 @@
-<hr class="<?= $instance['line'] ?>" style="padding: <?= (($instance['height']-1)/2).'px' ?> 0px;">
+<hr class="<?= $instance['line'] ?>" style="margin: <?= (($instance['height']-1)/2).'px' ?> 0px;">

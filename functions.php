@@ -203,7 +203,7 @@ function wp_save_hijack(){
 	}
 }
 
-$ptd = get_template_directory()."/inc/short-codes/*.php";
+$ptd = get_template_directory()."/shortcodes/*.php";
 foreach (glob($ptd) as $filename) {
     include $filename;
 }
