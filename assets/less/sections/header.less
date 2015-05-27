@@ -1,5 +1,6 @@
 @nav-mobilebp: 768px;
 @nav-container-height: 100px;
+@mobilenav-container-height: 50px;
 @scroll-nav-container-height: 60px;
 @top-level-font-size: 			16px;
 @nav-background: 				white;
@@ -12,11 +13,15 @@
 /* ==============================
    1. Global
    ============================== */
-   body{
-	   margin-top: @nav-container-height;
-   }
+body{
+   margin-top: @nav-container-height;
+}
    
 @media all and (max-width: unit(@nav-mobilebp, px)) {
+	body{
+	   margin-top: @mobilenav-container-height;
+	}
+
   .visible-mobile {
     display: block;
     
@@ -25,7 +30,7 @@
   margin-bottom: 0 !important;
   transition: 0.3s;
   background: @nav-background;
-  min-height: 100px;
+
   }
   }
   .hidden-mobile {
@@ -57,14 +62,17 @@
 }
 .sm-nav>li {
 	font-size: @top-level-font-size;
-	.nav_padding(@nav-container-height);
+  .nav_padding(@nav-container-height);
   	&.current-menu-item, &.current-menu-ancestor, &.current-menu-parent{
 	  	a{color: @menu-link-color-active;}
   	}
-	  a{
+	&.primary{
+		a{color: @primary_colour;}
+	}
+	a{
 			color: @menu-link-color;
 			&:hover{ color: @menu-link-color-hover;}
-	  }
+	}
 	}
     
     
@@ -140,9 +148,15 @@
 /* ==============================
    3.0 Menu Items
    ============================== */
-.supermenu .sm-nav > li {
+.supermenu #supermenu-sm-navbar-collapse-mob .sm-nav > li {
   box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid @text_colour;
+  &:hover{
+	  background: fade(@primary_colour, 50%);
+  }
 }
+
 .supermenu .sm-nav>li>a {
   padding: 0 15px 0 15px;
   text-decoration: none;
@@ -263,16 +277,14 @@
    5. MOBILE TOGGLE
    ============================== */
 .supermenu .sm-navbar-toggle {
-  border-color: #919191;
-  margin-top: 15px;
+  border-color: @text_colour;
   transition: all 0.3s;
   border-radius: 0;
   border-width: 0;
   float: left;
   z-index: 99;
-  margin-right: 0;
-  padding-top: (@scroll-nav-container-height/2-@top-level-font-size );
-  padding-bottom:(@scroll-nav-container-height/2-@top-level-font-size);
+  margin-left: 10px;
+  .nav_padding(@mobilenav-container-height);
 }
 .supermenu .sm-navbar-toggle .icon-bar {
   background-color: #D0D0D0;
@@ -317,7 +329,7 @@
   width: 40px;
   height: 5px;
   background: #4C4C4C;
-  border-radius: 0.28571rem;
+  border-radius: @rounding;
   transition: 0.3s;
   position: relative;
 }
@@ -326,7 +338,7 @@
   width: 40px;
   height: 5px;
   background: #4C4C4C;
-  border-radius: 0.28571rem;
+  border-radius: @rounding;
   transition: 0.3s;
   position: absolute;
   left: 0;
@@ -488,9 +500,6 @@
   -moz-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
   transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0.5s;
   -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0.5s;
@@ -518,7 +527,6 @@
   }
   .supermenu.style_2 .sm-navbar-header,
   .supermenu.style_2 .sm-navbar-collapse {
-    /*display: table-row-group !important;*/
     width: 100%;
     position: relative;
   }

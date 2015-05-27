@@ -1,12 +1,12 @@
 // Links
 a {
-  color: @primary;
+  color:@primary_colour;
   text-decoration: none;
   transition: .25s;
 
   &:hover,
   &:focus {
-    color: @accent;
+    color: spin(@primary_colour, 10%);
     text-decoration: none;
   }
   &:focus {
