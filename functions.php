@@ -4,7 +4,7 @@ include_once 'gallery/init.php';
 
 function ps_add_main_styles($styles) { 
 	$extra_styles = array(
-		get_stylesheet_directory().'/assets/less/site.less'
+		get_template_directory().'/assets/less/site.less'
 	);
  	// combine the two arrays
 	$styles = array_merge($extra_styles, $styles);
@@ -65,30 +65,10 @@ function getContrastYIQ($hexcolor){
 	return ($yiq >= 128) ? 'black' : 'white';
 }
 
-
-// unregister default widgets
- function unregister_default_widgets() {
-     unregister_widget('WP_Widget_Pages');
-     unregister_widget('WP_Widget_Calendar');
-     unregister_widget('WP_Widget_Archives');
-     unregister_widget('WP_Widget_Links');
-     unregister_widget('WP_Widget_Meta');
-     unregister_widget('WP_Widget_Search');
-     unregister_widget('WP_Widget_Text');
-     unregister_widget('WP_Widget_Categories');
-     unregister_widget('WP_Widget_Recent_Posts');
-     unregister_widget('WP_Widget_Recent_Comments');
-     unregister_widget('WP_Widget_RSS');
-     unregister_widget('WP_Widget_Tag_Cloud');
-     unregister_widget('WP_Nav_Menu_Widget');
- }
- add_action('widgets_init', 'unregister_default_widgets', 11);
-
 $ptd = get_template_directory()."/inc/widgets/*/*.php";
 foreach (glob($ptd) as $filename) {
     include $filename;
 }
-
 
 // HTML 5 tags for old ie
 if(preg_match('/(?i)msie [4-8]/',$_SERVER['HTTP_USER_AGENT']))
@@ -101,77 +81,7 @@ add_action('wp_head', function(){ ?>
  <?php });
 }
 
-/**
- * Clean up wp_head()
- *
- * Remove unnecessary <link>'s
- * Remove inline CSS used by Recent Comments widget
- * Remove inline CSS used by posts with galleries
- * Remove self-closing tag and change ''s to "'s on rel_canonical()
- */
-function head_cleanup() {
-  remove_action('wp_head', 'feed_links', 2);
-  remove_action('wp_head', 'feed_links_extra', 3);
-  remove_action('wp_head', 'rsd_link');
-  remove_action('wp_head', 'wlwmanifest_link');
-  remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-  remove_action('wp_head', 'wp_generator');
-  remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-  global $wp_widget_factory;
-}
-add_action('admin_init', 'head_cleanup');
-
-/* Remove navbar when in site preview */
-add_filter('show_admin_bar', '__return_false');
-/* Remove the WordPress version from RSS feeds  */
-add_filter('the_generator', '__return_false');
-
-/* Remove unnecessary dashboard widgets */
-function remove_dashboard_widgets() {
-  remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
-  remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
-  remove_meta_box('dashboard_primary', 'dashboard', 'normal');
-  remove_meta_box('dashboard_secondary', 'dashboard', 'normal');
-}
-add_action('admin_init', 'remove_dashboard_widgets');
-
-/* Fix for empty search queries redirecting to home page */
-function roots_request_filter($query_vars) {
-  if (isset($_GET['s']) && empty($_GET['s']) && !is_admin()) {
-    $query_vars['s'] = ' ';
-  }
-  return $query_vars;
-}
-add_filter('request', 'roots_request_filter');
-
-function remove_menus(){
-  
-/*   remove_menu_page( 'index.php' );                  //Dashboard */
-  remove_menu_page( 'edit.php' );                   //Posts
-  remove_menu_page( 'upload.php' );                 //Media
-/*   remove_menu_page( 'edit.php?post_type=page' );    //Pages */
-  remove_menu_page( 'edit-comments.php' );          //Comments
-  remove_menu_page( 'themes.php' );                 //Appearance
-  remove_menu_page( 'plugins.php' );                //Plugins
-  remove_menu_page( 'users.php' );                  //Users
-  remove_menu_page( 'tools.php' );                  //Tools
-  remove_menu_page( 'options-general.php' );        //Settings
-  
-}
-
-if (! current_user_can( 'manage_options' )) {
-add_action( 'admin_menu', 'remove_menus' );
- }
- 
-/*
- $ptd = get_template_directory()."/inc/post-types/*.php";
-foreach (glob($ptd) as $filename) {
-    include $filename;
-}
-*/
-
 if ( current_user_can('administrator') ) {
-
    function prebuilt_page_layouts($layouts){
 	$ptd = get_template_directory()."/inc/layouts/*.php";
 		foreach (glob($ptd) as $filename) {
@@ -182,26 +92,7 @@ if ( current_user_can('administrator') ) {
 	}
 add_filter('siteorigin_panels_prebuilt_layouts', 'prebuilt_page_layouts');  
 
-} else {
-/* echo('not admin'); */
-}
-
-add_action('admin_head', 'wp_save_hijack');
-function wp_save_hijack(){
-	$screen = get_current_screen();
-	if($screen->base == 'post'){
-?>
-		<script type="text/javascript">
-			document.addEventListener("keydown", function(e) {
-			  if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-					  document.getElementById('publish').click();		
-					  e.preventDefault();
-			  }
-			}, false);
-		</script>
-<?php
-	}
-}
+} else {/* echo('not admin'); */}
 
 $ptd = get_template_directory()."/shortcodes/*.php";
 foreach (glob($ptd) as $filename) {
