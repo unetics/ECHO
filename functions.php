@@ -17,7 +17,6 @@ $styleVars = array(	);
 function scripts() {
 wp_enqueue_script('jquery'); 
 wp_enqueue_script( 'js', get_template_directory_uri() . '/js/site-min.js');
-wp_enqueue_script( 'funk', get_template_directory_uri() . '/js/functions.js');
 }
 add_action('wp_enqueue_scripts', 'scripts', 100);
 
