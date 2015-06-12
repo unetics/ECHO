@@ -48,6 +48,7 @@
 @import "components/panels";
 @import "components/sliders";
 @import "components/gallery";
+@import "components/feature-box";
 
 /* sections */
 @import "sections/header";
@@ -73,4 +74,9 @@ width: 100%;
 }
 p span.primary{
 	color: @primary_colour;
+}
+
+
+.sow-icon-elf[data-sow-icon]:before {
+  content: attr(data-sow-icon);
 }

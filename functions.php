@@ -14,11 +14,10 @@ add_filter('ps_add_styles', 'ps_add_main_styles');
 
 $styleVars = array(	);	
 
-function scripts() {
-wp_enqueue_script('jquery'); 
-wp_enqueue_script( 'js', get_template_directory_uri() . '/js/site-min.js');
+function load_scripts() {
+	wp_enqueue_script( 'js', get_template_directory_uri() . '/js/site-min.js', '','',false);
 }
-add_action('wp_enqueue_scripts', 'scripts', 100);
+add_action('wp_enqueue_scripts', 'load_scripts', 100);
 
 function register_main_menus() {
 	register_nav_menus( array( 

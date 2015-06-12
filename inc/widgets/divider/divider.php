@@ -5,7 +5,7 @@
 * Description: add required space
 * Version: 1.0
 */
-class divider extends WP_Widget {
+class PSdivider extends WP_Widget {
 	
 	function __construct(){
 		parent::__construct(
@@ -50,4 +50,4 @@ class divider extends WP_Widget {
 	function register_admin_scripts(){	}
 
 }
-add_action('widgets_init', create_function('', 'register_widget("divider");'));
+add_action('widgets_init', create_function('', 'register_widget("PSdivider");'));
