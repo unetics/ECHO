@@ -1,25 +1,20 @@
 @nav-mobilebp: 768px;
 @nav-container-height: 100px;
 @mobilenav-container-height: 50px;
-@scroll-nav-container-height: 60px;
-@top-level-font-size: 			16px;
-@nav-background: 				white;
-@nav-background-scroll:			white;
-@topmenu-etp-background: 		black;
 
-.nav_padding(@container){
-	padding: ((@container - @top-level-font-size) / 2 ) 0;
+.nav_padding(@container, @font_size){
+	padding: ((@container - @desktop_font_size) / 2 ) 0;
 }
 /* ==============================
    1. Global
    ============================== */
 body{
-   margin-top: @nav-container-height;
+   margin-top: @nav_height;
 }
    
 @media all and (max-width: unit(@nav-mobilebp, px)) {
 	body{
-	   margin-top: @mobilenav-container-height;
+	   margin-top: unit(@mobilenav-container-height, px);
 	}
 
   .visible-mobile {
@@ -37,6 +32,8 @@ body{
     display: none;
   }
 }
+
+
 @media all and (min-width: unit(@nav-mobilebp, px)) {
   .visible-mobile {
     display: none;
@@ -49,20 +46,34 @@ body{
   margin-bottom: 0 !important;
   transition: 0.3s;
   background: @nav-background;
-  min-height: 100px;
-  box-shadow: 0px 0px unit(@box-shadow, px) unit(@box-shadow, px) black;
+  min-height: @nav_height;
+  box-shadow: 0px 0px unit(@desktop_shadow, px) unit(@desktop_shadow, px) rgba(0, 0, 0, 0.5);
+  	.desktop_logo_scroll{
+		display: none;
+	}
   
   &.scroll-change {
-  	background: @nav-background-scroll !important;
-  	min-height: @scroll-nav-container-height;
-	max-height: @scroll-nav-container-height;
-	  .sm-nav>li { .nav_padding(@scroll-nav-container-height);	}
+	.desktop_logo_scroll{
+		display: block;
 	}
+  	background: @desktop_background_scroll !important;
+  	min-height: @desktop_height_scroll;
+	max-height: @desktop_height_scroll;
+	box-shadow: 0px 0px unit(@desktop_shadow_scroll, px) unit(@desktop_shadow_scroll, px) rgba(0, 0, 0, 0.5); 
+	 
+	  .sm-nav>li { 
+		  .nav_padding(@desktop_height_scroll, @desktop_font_size_scroll);
+		  font-size: @desktop_font_size_scroll;
+		  
+	  }
+	  
+	}
+	
 
 }
 .sm-nav>li {
-	font-size: @top-level-font-size;
-  .nav_padding(@nav-container-height);
+	font-size: @desktop_font_size;
+  .nav_padding(@nav_height, @desktop_font_size);
   	&.current-menu-item, &.current-menu-ancestor, &.current-menu-parent{
 	  	a{color: @menu-link-color-active;}
   	}
@@ -85,16 +96,6 @@ body{
 .supermenu .sm-navbar-header {
   transition: 0.3s;
 }
-.supermenu.shadow.small-shadow-btm {
-          box-shadow: 0 6px 7px -6px rgba(0,0,0,0.135);
-}
-.supermenu.shadow.medium-shadow-btm {
-          box-shadow: 0 8px 6px -6px rgba(0,0,0,0.135);
-}
-.supermenu.shadow.large-shadow-btm {
-          box-shadow: 0 11px 11px -6px rgba(0,0,0,0.135);
-}
-
 .admin-bar .supermenu.sm-navbar-fixed-top{
   top: 32px;
 }
@@ -284,7 +285,7 @@ body{
   float: left;
   z-index: 99;
   margin-left: 10px;
-  .nav_padding(@mobilenav-container-height);
+  .nav_padding(@mobilenav-container-height, 16);
 }
 .supermenu .sm-navbar-toggle .icon-bar {
   background-color: #D0D0D0;
