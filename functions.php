@@ -1,6 +1,5 @@
 <?php
 include_once 'shortcodes/init.php';
-include_once 'gallery/init.php';
 
 function ps_add_main_styles($styles) { 
 	$extra_styles = array(
@@ -78,8 +77,7 @@ if ( current_user_can('administrator') ) {
 	return $layouts;
 	}
 add_filter('siteorigin_panels_prebuilt_layouts', 'prebuilt_page_layouts');  
-
-} else {/* echo('not admin'); */}
+} 
 
 $ptd = get_template_directory()."/shortcodes/*.php";
 foreach (glob($ptd) as $filename) {

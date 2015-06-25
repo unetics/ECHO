@@ -1,4 +1,3 @@
-gallery
 <?php 
 	
 	print_r(tr_post_field("[gallery]"));
