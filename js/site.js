@@ -12,3 +12,4 @@
 //@codekit-prepend "lib/masonry.pkgd.min.js"
 //@codekit-prepend "lib/jquery.stickyfooter.js"
 //@codekit-prepend "lib/enhance.js"
+//@codekit-prepend "lib/jquery.timepicker.js"
