@@ -1194,4 +1194,6 @@
 	};
 }));
 
-jQuery('.timepicker').timepicker();
+jQuery(window).load(function(){  
+    jQuery('.timepicker').timepicker(); 
+}); 
