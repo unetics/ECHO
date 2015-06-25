@@ -15,7 +15,7 @@ add_filter('ps_add_styles', 'ps_add_main_styles');
 $styleVars = array(	);	
 
 function load_scripts() {
-	wp_enqueue_script( 'js', get_template_directory_uri() . '/js/site-min.js', '','',false);
+	wp_enqueue_script( 'js', get_template_directory_uri() . '/js/site-min.js', '','1.8.7',false);
 }
 add_action('wp_enqueue_scripts', 'load_scripts', 100);
 
