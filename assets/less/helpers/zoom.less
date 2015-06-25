@@ -1,0 +1,54 @@
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}
+
+.zoom-img,
+.zoom-img-wrap {
+  position: relative;
+  z-index: 1000;
+}
+
+img.zoom-img {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+
+.zoom-overlay {
+  z-index: 999;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.zoom-overlay-open,
+.zoom-overlay-transitioning {
+  cursor: default;
+}
+
+.zoom-overlay-open .zoom-overlay {
+  opacity: 1;
+}
+
+.crop-cover  	{object-fit: cover}
+.crop-contain	{object-fit: contain}
+.crop-scale  	{object-fit: scale-down}
+.crop-none   	{object-fit: none}
+
+.anchor-top-left     	{object-position: top left}
+.anchor-top-center   	{object-position: top center}
+.anchor-top-right    	{object-position: top right}
+.anchor-center-left  	{object-position: center left}
+.anchor-center-center	{object-position: center}
+.anchor-center-right 	{object-position: center right}
+.anchor-bottom-left  	{object-position: bottom left}
+.anchor-bottom-center	{object-position: bottom center}
+.anchor-bottom-right 	{object-position: bottom right}

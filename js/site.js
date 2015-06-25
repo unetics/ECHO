@@ -1,4 +1,5 @@
 //@codekit-prepend "lib/noConflict.js"
+//@codekit-prepend "lib/velocity.min.js"
 //@codekit-prepend "lib/ResizeSensor.js"
 //@codekit-prepend "lib/ElementQueries.js"
 //@codekit-prepend "lib/jquery.shuffle.min.js"
@@ -10,3 +11,4 @@
 //@codekit-prepend "lib/modernizr.js"
 //@codekit-prepend "lib/masonry.pkgd.min.js"
 //@codekit-prepend "lib/jquery.stickyfooter.js"
+//@codekit-prepend "lib/enhance.js"

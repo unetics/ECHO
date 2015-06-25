@@ -1,0 +1,131 @@
+.entry {
+    position: relative;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+}
+
+.entry-image {
+    margin-bottom: 30px;
+}
+
+.entry-image,
+.entry-image > a,
+.entry-image .slide a,
+.entry-image img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.entry-title {
+    h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        a {
+            color: #333;
+            &:hover {
+                color: @theme-color;
+            }
+        }
+    }
+}
+
+.entry-meta {
+    list-style: none;
+    li {
+        float: left;
+        font-size: 13px;
+        line-height: 14px;
+        margin: 0 10px 15px 0;
+        color: #999;
+        font-style: italic;
+        &:before {
+            content: '/';
+            display: inline-block;
+            margin-right: 10px;
+            opacity: 0.5;
+        }
+        i {
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+            margin-right: 3px;
+        }
+        a {
+            color: #999;
+            &:hover {
+                color: @theme-color;
+            }
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+        ins {
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+}
+
+body {
+    &:not(.device-touch) {
+        .entry-link {
+            transition: background-color .3s ease-in-out;
+        }
+    }
+}
+
+
+	.morePlease{
+		width: 100%;
+		margin: 20px 0;
+	}
+	
+.masonry {
+  margin: 0;
+}
+
+.item {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  margin: 1%;
+  width: 98%;
+  padding: 28px;
+  background-color: #fff;
+  height: 300px;
+  overflow: hidden;
+  
+}
+.one-col .entry-image{
+	  width: 30%;
+	  float: left;
+}
+.one-col .entry-info{
+	width: 70%;
+  padding: 3%;
+	float: left;
+}
+.two-col .item{
+	width: 46%;
+	height: 600px;
+}
+.more-link{
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	background: @theme-color;
+	color: white;
+	bottom: 0;
+	left: 0;
+	
+}
+@media (max-width:780px) {
+.entry-info, .entry-image{
+	width: 100% !important;
+}
+}

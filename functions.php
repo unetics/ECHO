@@ -85,3 +85,5 @@ $ptd = get_template_directory()."/shortcodes/*.php";
 foreach (glob($ptd) as $filename) {
     include $filename;
 }
+
+
