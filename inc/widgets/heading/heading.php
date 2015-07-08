@@ -13,7 +13,8 @@ class heading extends WP_Widget {
 			'Heading',
 			array(
 				'classname' 	=> 'heading',
-				'description' 	=> 'Add a Text Heading'
+				'description' 	=> 'Add a Text Heading',
+				'panels_groups' => array('depreciated'),
 			));	
 	}
 	

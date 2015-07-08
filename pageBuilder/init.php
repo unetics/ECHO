@@ -34,3 +34,15 @@ function parralax_row_style_attributes( $attributes, $args ) {
 }
 
 add_filter('siteorigin_panels_row_style_attributes', 'parralax_row_style_attributes', 10, 2);
+
+function mytheme_add_widget_tabs($tabs) {
+    $tabs[] = array(
+        'title' => __('My Tab', 'mytheme'),
+        'filter' => array(
+            'groups' => array('depreciated')
+        )
+    );
+
+    return $tabs;
+}
+add_filter('siteorigin_panels_widget_dialog_tabs', 'mytheme_add_widget_tabs', 20);

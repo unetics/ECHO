@@ -1,5 +1,6 @@
 //@codekit-prepend "lib/noConflict.js"
 //@codekit-prepend "lib/velocity.min.js"
+//@codekit-prepend "lib/hoverIntent.js"
 //@codekit-prepend "lib/ResizeSensor.js"
 //@codekit-prepend "lib/ElementQueries.js"
 //@codekit-prepend "lib/jquery.shuffle.min.js"

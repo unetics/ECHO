@@ -4,9 +4,13 @@ class button extends WP_Widget {
 			// Instantiate the parent object
 			parent::__construct(
 				'button', // Base ID
-				'Button', // Name
-				array('description' => 'Create a button link or action'), // Args
-				array('icon' => 'dashicons dashicons-admin-links')
+				'Button yo', // Name
+				array(
+					'description' => 'Create a button link or action',
+					'panels_groups' => 'depreciated',
+					'icon' => 'monkey'
+				
+				) // Args
 			);
 		}
 
