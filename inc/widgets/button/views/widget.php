@@ -1,4 +1,4 @@
-<?php $classes = "btn $btnStyle $btnAlign ";?>
+<?php $classes = "btn $btnStyle $btnAlign $btnColour";?>
 <?php switch ($btnType): case 'url': ?>
 		<a href='http://<?=$btnUrl?>' <?=$btnUrlFollow?> <?=$btnUrlWindow?> class="<?=$classes?>">
 			<?=$btnText?>

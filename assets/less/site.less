@@ -25,6 +25,10 @@
 @heading-color:                 #444;	
 @header-height:                 100px;
 
+// Fonts
+@font-primary: "Helvetica Neue",HelveticaNeue,Helvetica,TeXGyreHeros,FreeSans,"Nimbus Sans L","Liberation Sans",Arial,sans-serif; // body font
+@font-secondary: @font-primary; // title font
+@font-monospace: Monaco, Consolas, 'Lucida Console', monospace;
 
 /* helpers */
 @import "helpers/font_colour";
@@ -61,14 +65,19 @@
 @import "sections/header";
 @import "sections/footer";
 
-body {
+
+html, body {
+  font-family: @font-primary
   color: @text_colour;
   background-color: @background_colour;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main{
-position: relative;
-width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 @media screen and ( max-width: 500px ) {
@@ -79,6 +88,7 @@ width: 100%;
 	text-align: center;
 }
 }
+
 p span.primary{
 	color: @primary_colour;
 }
@@ -86,11 +96,3 @@ p span.primary{
 .sow-icon-elf[data-sow-icon]:before {
   content: attr(data-sow-icon);
 }
-
-html, body {
-  font-family: "Helvetica Neue",HelveticaNeue,Helvetica,TeXGyreHeros,FreeSans,"Nimbus Sans L","Liberation Sans",Arial,sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-

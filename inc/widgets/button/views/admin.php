@@ -17,10 +17,17 @@
         <input type="text" id="<?= $this->get_field_id('btnText'); ?>" name="<?= $this->get_field_name('btnText'); ?>" class="form-control" placeholder="Button Text" value="<?= $instance['btnText'] ?>">
         <span class="input-group-addon">
             Colour: 
-            <select id="<?= $this->get_field_id('btnColour'); ?>" name="<?= $this->get_field_name('btnColour'); ?>">              				<option value="primary" 	<?php selected('primary', $btnType);?>>Primary</option>
-                <option value="black"   	<?php selected('black', $btnType);?>>Black</option>
-                <option value="white"  		<?php selected('white', $btnType);?>>White</option>
+            <select id="<?= $this->get_field_id('btnColour'); ?>" name="<?= $this->get_field_name('btnColour'); ?>">              				<option value="" 	<?php selected('', $btnType);?>>Primary</option>
+            	<option value="btn--accent" 	<?php selected('btn--accent', $btnType);?>>Accent</option>
+                <option value="btn--black"   	<?php selected('btn--black', $btnType);?>>Black</option>
+                <option value="btn--white"  		<?php selected('btn--white', $btnType);?>>White</option>
             </select>
+<!--
+            <label>text colour: </label>
+            <select id="<?= $this->get_field_id('btnTextColour'); ?>" name="<?= $this->get_field_name('btnTextColour'); ?>">              				<option value="text-primary" 	<?php selected('text-primary', $btnType);?>>Primary</option>
+            	<option value="text-accent" 	<?php selected('text-accent', $btnType);?>>Accent</option>
+            </select>
+-->
 			<label>Style: </label>
 			<select id="<?= $this->get_field_id('btnStyle'); ?>" name="<?= $this->get_field_name('btnStyle'); ?>">
 				<option  value="default"   <?php selected('default', $btnStyle, true);?> >Default</option>
@@ -29,10 +36,10 @@
 			</select>
 			<label>Align: </label>
 			<select id="<?= $this->get_field_id('btnAlign'); ?>" name="<?= $this->get_field_name('btnAlign'); ?>">
-				<option  value="center" <?php selected('center', $btnAlign, true);?> >Center</option>
-				<option  value="left"   <?php selected('left', $btnAlign, true);?>>Left</option>
-				<option  value="right"  <?php selected('right', $btnAlign, true);?>>Right</option>
-				<option  value="block"  <?php selected('block', $btnAlign, true);?>>Block</option>
+				<option  value="float-center" <?php selected('float-center', $btnAlign, true);?> >Center</option>
+				<option  value="float-left"   <?php selected('float-left', $btnAlign, true);?>>Left</option>
+				<option  value="float-right"  <?php selected('float-right', $btnAlign, true);?>>Right</option>
+				<option  value="float-block"  <?php selected('float-block', $btnAlign, true);?>>Block</option>
 			</select>
         </span>
         

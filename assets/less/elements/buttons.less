@@ -1,150 +1,91 @@
+button,
 .btn {
-  span{ color: @primary_colour; }
-
-  &.left{
-	  float: left;
-  }
-  &.right{
-	  float: right;
-  } 
-  &.center{
-  	  display: table;
-	  margin: 10px auto;
-  }
-  &.block {
-	  white-space: normal;
-	  display: block;
-  } 
-   
-  &.primary {
-	  background-color: @primary_colour;
-  }
-
-  &.link {
-	  color: @primary_colour;
-	  background-color: none;  
-	  padding: 0;
-	  	&:hover,
-	  	&:focus {
-		    text-decoration: underline;
-		    background-color: transparent;
-		    color: @accent_colour;
-		  		}
-		span{ color: @accent_colour; }
-  		}
-}
-
-
-
-.btn {
-	border: none;
-	margin: 10px;
-	padding: 14px 26px;
-	font-size: 14px;
-	line-height: 100%;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-	color: #fff;
-	display:inline-block;
-	vertical-align: middle;
+	margin: 1rem;
+	padding: 1rem 2rem;
+	display: inline-block;
+	font-family: @font-secondary;
+	font-size: inherit;
+	font-weight: normal;
 	text-align: center;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background 0.1s ease-in-out;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	color: #fff;
-	border-radius: unit(@rounding, px);
+	line-height: 1;
 	background-color: @primary_colour;
-	box-shadow: 0px 3px 0px 0px fadeout( @primary_colour, 15% );
+	color: @background_colour;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	vertical-align: middle;
+	transition: all .3s ease-in-out;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	border-radius: unit(@rounding, px);
 	text-decoration: none;
-	&:hover {
-	background-color: fadeout( @primary_colour, 5% );
-}
-	&.black{ 
-		color: white;
-		background: black;
-		box-shadow: 0px 3px 0px 0px #777;
-	    &:hover, &:focus {
-	  	color: white;
-		background: black;
-		}
-	}
-	&.white{ 
-		color: black;
-		background: white;
-		box-shadow: 0px 3px 0px 0px #ddd;
-		text-shadow: none;
-	  &:hover, &:focus {
-	  	color: black;
-		background: #eee;
-		}
-	}	
+	box-sizing: border-box;
 	
-	&.ghost {
-	  color: @primary_colour;
-	  text-shadow: none;
-	  background-color: none;
-	  background: none;
-	  border: solid 2px @primary_colour;
-	  box-shadow: none;
-	  
-	  &:hover, &:focus {
-	  	color: white;
-		background: @primary_colour;
-		}
-	&.black{ 
-		  color: black;
-		  border: solid 2px black;
-	  &:hover, &:focus {
-	  	color: white;
-		background: black;
-		}
-	}
-	&.white{ 
-		color: white;
-		border: solid 2px white;
-	  &:hover, &:focus {
-	  	color: black;
-		background: white;
-		}
-	}		
-	}
-
-	&.link {
-	  color: @primary_colour;
-	  text-shadow: none;
-	  background-color: none;
-	  background: none;
-	  border: none;
-	  box-shadow: none;
-	  border-bottom: 1px solid @primary_colour;
-	  &:hover, &:focus {
-	  	background: none;
+	&:hover,
+	&:focus,
+	&:active {
 		text-decoration: none;
-		border-bottom: 1px solid @primary_colour;
-		}
-	&.black{ 
-		  color: black;
-		  border-bottom: 1px solid black;
-	  &:hover, &:focus {
-	  	border-bottom: 1px solid @primary_colour;
-		}
+		background-color: mix(black, @primary_colour, 15%) !important;
+		box-shadow: none !important;
+		color: white !important;
 	}
-	&.white{ 
-		color: white;
-		border-bottom: 1px solid white;
-	  &:hover, &:focus {
-	  	border-bottom: 1px solid @primary_colour;
-		}
-	}		
+	
+	&.btn--disabled, &[disabled] {
+	    cursor: not-allowed;
+	    opacity: .6;
+  	}
+  	
+  	&.ghost{
+	  	text-shadow: none;
+	  	background-color: transparent;
+	  	box-shadow: inset 0 0 0 2px @primary_colour;
 	}
 
-	
 }
-	
-.btn.default:active {
-	padding-top: 15px;
-    margin-bottom: 9px;
-    box-shadow: 0px 1px 0px 0px fadeout( @primary_colour, 15% );
+
+.btn--accent{
+  background-color: @accent_colour;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: mix(black,@accent_colour, 15%) !important;
+  }
+  
+  &.ghost{
+  	box-shadow: inset 0 0 0 2px @accent_colour;
+  }
+}
+
+.btn--black{
+  background-color: black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: mix(white,black, 25%) !important;
+  }
+  
+  &.ghost{
+	color: black; 
+  	box-shadow: inset 0 0 0 2px black;
+  }
+}
+
+.btn--white{
+  background-color: white;
+  color: black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: mix(black,white, 15%) !important;
+    color: black !important;
+  }
+  
+  &.ghost{
+	color: white;
+  	box-shadow: inset 0 0 0 2px white;
+  }
 }
 
 
