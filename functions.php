@@ -26,12 +26,7 @@ function register_main_menus() {
 }
 if (function_exists('register_nav_menus')) add_action( 'init', 'register_main_menus' );
 
-
 add_theme_support( 'post-thumbnails' );
-
-if (is_admin()) {
-     require('admin/functions.php');    
-}
 
 // Settings to Page Builder
 require('pageBuilder/init.php');
